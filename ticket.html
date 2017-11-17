@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>UDo Trouble Ticketing</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="apple-touch-icon" href="iosicon.png" />
+<!--    DEVELOPMENT LESS -->
+<!--    <link rel="stylesheet/less" href="css/udoUI.less" media="all" />
+        <link rel="stylesheet/less" href="css/udoUI-responsive.less" media="all" />-->
+<!--    PRODUCTION CSS -->
+        <link rel="stylesheet" href="css/css_compiled/udoUI-min.css" media="all" />
+        <link rel="stylesheet" href="css/css_compiled/udoUI-min-part2.css" media="all" />
+        <link rel="stylesheet" href="css/css_compiled/udoUI-responsive-min.css" media="all" />
+
+<!--[if IE]>
+        <link rel="stylesheet" type="text/css" href="css/css_compiled/ie-only-min.css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="css/css_compiled/ie8-only-min.css" />
+        <script type="text/javascript" src="js/plugins/excanvas.js"></script>
+        <script type="text/javascript" src="js/plugins/html5shiv.js"></script>
+        <script type="text/javascript" src="js/plugins/respond.min.js"></script>
+        <script type="text/javascript" src="js/plugins/fixFontIcons.js"></script>
+<![endif]-->
+        
+<script type="text/javascript" src="js/plugins/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery-ui-1.8.10.custom.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.pnotify.min.js"></script>
+
+<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/plugins/less-1.3.1.min.js"></script>        
+<script type="text/javascript" src="js/plugins/xbreadcrumbs.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.maskedinput-1.3.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.autotab-1.1b.js"></script>
+<script type="text/javascript" src="js/plugins/charCount.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.textareaCounter.js"></script>
+<script type="text/javascript" src="js/plugins/elrte.min.js"></script>
+<script type="text/javascript" src="js/plugins/elrte.en.js"></script>
+<script type="text/javascript" src="js/plugins/select2.js"></script>
+<script type="text/javascript" src="js/plugins/jquery-picklist.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/plugins/additional-methods.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.form.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.metadata.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.mockjax.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.uniform.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.tagsinput.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.rating.pack.js"></script>
+<script type="text/javascript" src="js/plugins/farbtastic.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.timeentry.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.jstree.js"></script>
+<script type="text/javascript" src="js/plugins/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.flot.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.flot.stack.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.flot.pie.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.flot.resize.js"></script>
+<script type="text/javascript" src="js/plugins/raphael.2.1.0.min.js"></script>
+<script type="text/javascript" src="js/plugins/justgage.1.0.1.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.clock.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.countdown.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.jqtweet.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/plugins/bootstrap-fileupload.min.js"></script>
+<script type="text/javascript" src="js/plugins/prettify/prettify.js"></script>
+
+<script type="text/javascript" src="js/common.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+    <body class="body-dashboard">
+
+    <div class="nav-fixed-left" style="visibility: hidden">
+        <ul class="nav nav-side-menu">
+            <li class="shadow-layer"></li>
+            <li>
+                <a href="dashboard.html">
+                    <i class="icon-udoUI home"></i>
+                    <span class="nav-selection"><b>UDo Trouble Ticketing</b></span>
+                                    </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="sub-nav-container">
+                    <i class="icon-udoUI list_nested"></i>
+                    <span class="nav-selection">Ticketing</span>
+                    <i class="icon-menu-arrow"></i></a>
+                <div class="sub-nav">
+                    <ul class="nav">
+                        <li>
+                            <a href="#">Bluevia</a>
+                        </li>
+                        <li>
+                            <a href="#">NEO SDP</a>
+                        </li>
+                        <li>
+                            <a href="#">M2M Jasper</a>
+                        </li>
+                        <li>
+                            <a href="#">Instant Servers</a>
+                        </li>
+                        <li>
+                            <a href="#">UDo TT</a>
+                        </li>     
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="ticket-list.html">
+                    <i class="icon-udoUI list"></i>
+                    <span class="nav-selection">Lists</span>
+                                    </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-udoUI article"></i>
+                    <span class="nav-selection">Inventory</span>
+                                    </a>
+            </li>
+            <li>
+		<a href="#">
+                    <i class="icon-udoUI chart"></i>
+                    <span class="nav-selection">Reports</span>
+			</a>
+                                   
+            </li>
+	    <li>
+                <a href="tables.php">
+                    <i class="icon-udoUI new_window"></i>
+                    <span class="nav-selection">Tables</span>
+                                    </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-udoUI info"></i>
+                    <span class="nav-selection">Help</span>
+                                    </a>
+            </li>
+            <li>
+                <span class="nav-selection">
+                    <div class="widget-holder-sidebar">
+                        <div class="widget-area widget-general-stats">
+                            <div class="widget-head">
+                                Hot List views
+                                <div>
+                                    <img src="images/udoUI/w_arrows@2x.png" alt="Arrows" />
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <i class="icon-udoUI new_window icon-list-udoUI "></i>&nbsp;Tickets Unresolved
+                                    <div>
+                                        <span>5</span>
+                                        <img src="images/udoUI/w_arrow_green@2x.png" alt="Arrow up" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-udoUI new_window icon-list-udoUI "></i>&nbsp;Unallocated Tickets
+                                    <div>
+                                        <span>6</span>
+                                        <img src="images/udoUI/w_arrow_green@2x.png" alt="Arrow up" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-udoUI new_window icon-list-udoUI "></i>&nbsp;Outstanding Tickets
+                                    <div>
+                                        <span>2</span>
+                                        <img src="images/udoUI/w_arrow_red@2x.png" alt="Arrow up" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-udoUI new_window icon-list-udoUI "></i>&nbsp;Tickets Newly Solved
+                                    <div>
+                                        <span>5</span>
+                                        <img src="images/udoUI/w_arrow_green@2x.png" alt="Arrow up" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-udoUI new_window icon-list-udoUI "></i>&nbsp;All Unsolved Tickets
+                                    <div>
+                                        <span>3</span>
+                                        <img src="images/udoUI/w_arrow_red@2x.png" alt="Arrow up" />
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <img class="widget-white-shadow" src="images/udoUI/w_shadow.png" alt="shadow" />
+                    </div>
+                </span>
+            </li>
+            <li>
+                <span class="nav-selection">
+                    <div class="widget-holder-sidebar">
+                        <div class="widget-area widget-general-stats">
+                            <div class="widget-head">
+                                Sla Violations views
+                                <div>
+                                    <img src="images/udoUI/w_arrows@2x.png" alt="Arrows" />
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <i class="icon-udoUI new_window icon-list-udoUI "></i>&nbsp;Tickets Unresolved
+                                    <div>
+                                        <span>5</span>
+                                        <img src="images/udoUI/w_arrow_green@2x.png" alt="Arrow up" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-udoUI new_window icon-list-udoUI "></i>&nbsp;Unallocated Tickets
+                                    <div>
+                                        <span>6</span>
+                                        <img src="images/udoUI/w_arrow_green@2x.png" alt="Arrow up" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-udoUI new_window icon-list-udoUI "></i>&nbsp;Outstanding Tickets
+                                    <div>
+                                        <span>2</span>
+                                        <img src="images/udoUI/w_arrow_red@2x.png" alt="Arrow up" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-udoUI new_window icon-list-udoUI "></i>&nbsp;Tickets Newly Solved
+                                    <div>
+                                        <span>5</span>
+                                        <img src="images/udoUI/w_arrow_green@2x.png" alt="Arrow up" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-udoUI new_window icon-list-udoUI "></i>&nbsp;All Unsolved Tickets
+                                    <div>
+                                        <span>3</span>
+                                        <img src="images/udoUI/w_arrow_red@2x.png" alt="Arrow up" />
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <img class="widget-white-shadow" src="images/udoUI/w_shadow.png" alt="shadow" />
+                    </div>
+                </span>
+            </li>
+        </ul>
+    </div>
+<div class="nav-fixed-topright" style="visibility: hidden">
+    <ul class="nav nav-user-menu">
+       <li class="user-sub-menu-container">
+            <a href="javascript:;">
+                <i class="user-icon"></i><span class="nav-user-selection">UDo Admin</span><i class="icon-menu-arrow"></i>
+            </a>
+                        <ul class="nav user-sub-menu">
+                                <li>
+                    <a href="javascript:;">My Profile</a>
+                </li>
+                                <li>
+                    <a href="javascript:;">Settings</a>
+                </li>
+                                <li>
+                    <a href="javascript:;">Messages</a>
+                </li>
+                                <li>
+                    <a href="javascript:;">Help</a>
+                </li>
+                            </ul>
+                    </li>
+        <li>
+            <a href="javascript:;">
+                <i class="configuration-icon"></i>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <i class="shut_down-icon"></i>
+            </a>
+        </li>
+    </ul>
+</div> 
+
+	<script>
+    $(function(){
+        setTimeout(function(){
+            $('.nav-fixed-topright').removeAttr('style');
+        }, 300);
+        
+        $(window).scroll(function(){
+            if($('.breadcrumb-container').length){
+                var scrollState = $(window).scrollTop();
+                if (scrollState > 0) $('.nav-fixed-topright').addClass('nav-released');
+                else $('.nav-fixed-topright').removeClass('nav-released')
+            }
+        });
+        
+        $('.user-sub-menu-container').on('click', function(){
+            $(this).toggleClass('active-user-menu');
+        });
+    });
+</script>      
+<div>
+    <div class="container-fluid dashboard dashboard-quick-launch dashboard-detail">
+        <div class="row-fluid">
+            <div class="span12">
+                <ul id="sortable">
+                    <li class="add-ql">
+                        <div class="add-quick-launch dropdown-toggle" data-toggle="dropdown" id="addql"> </div>
+                        <ul class="dropdown-menu new-detail" id="new">
+                            <li class="dropdown-submenu"><a href="javascript:;">New ticket</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:;">BlueVia</a></li>
+                                    <li><a href="javascript:;">NEo SDP</a></li>
+                                    <li><a href="javascript:;">UDo TT</a></li>
+                                    <li><a href="javascript:;">Instant Servers</a></li>
+                                    <li><a href="javascript:;">Chronic Patients</a></li>
+                                    <li><a href="javascript:;">Xxxxx Xxxxxxx</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:;">New Work order</a></li>
+                            <li><a href="javascript:;">New Problem</a></li>
+                            <li><a href="javascript:;">New problem Type</a></li>
+                            <li><a href="javascript:;">New Symptom</a></li>
+                            <li><a href="javascript:;">New Task</a></li>
+                            <li><a href="javascript:;">New Procedure</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><i class="icon-udoUI new_window"></i>
+                            Last visits</p>
+                    </li>
+                    <li>
+						<a href="ticket-list.html">
+                        <p><i class="icon-udoUI new_window"></i>
+                            </td>Tickets</p></a>
+                    </li>
+                    <li>
+						<a href="incidence-list.html">
+                        <p><i class="icon-udoUI new_window"></i>
+                            Incidences</p></a>
+                    </li>
+                    <li>
+                        <div class="panel-search container-fluid">
+                            <form class="form-horizontal" action="javascript:;">
+                                <input id="panelSearch" placeholder="Search" type="text" name="panelSearch" class="ui-autocomplete-input" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                                <button class="btn btn-search"></button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="main-content">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div style="float:left;">
+                    <a title="" href="#Ticket_Data" class="btn  btn-large btn-info" style="margin-top: 0px;margin-right: 10px;"> #432</a>
+                </div>
+                <ul class="nav">
+                    <li class="active"><a href="ticket.html">Ticket</a></li>
+                    <li><a href="incidence.html">Incidence</a></li>
+                </ul>
+                <div class="navbar-icon"><i class="save-icon"></i></i><i class="print-icon"></i></i><i class="reload-icon"></i></div>
+            </div>
+        </div>
+            <div class="nav-fixed-left-detail">
+                <ul class="nav nav-side-menu-detail">
+                    <li class="shadow-layer"></li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-udoUI pin"></i>
+                            <span class="nav-selection">Attach Document</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-udoUI pen"></i>
+                            <span class="nav-selection">Add Notes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-udoUI chat"></i>
+                            <span class="nav-selection">Add Questions</span>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="tables.php">
+                            <i class="icon-udoUI clock"></i>
+                            <span class="nav-selection">Ticket History</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sidebar-widgets.html">
+                            <i class="icon-udoUI clock"></i>
+                            <span class="nav-selection">Incidence History</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-udoUI info"></i>
+                            <span class="nav-selection">Help</span>
+                        </a>
+                    </li>
+                    <li>
+                </ul>
+            </div>
+            <div class="detail-container">
+
+
+                <form class="form-horizontal form-detail" />
+                <div class="container-fluid">
+
+                    <div class="form-legend" id="Input_Field"><div class="form-legend-title">Ticket Type CLAIM</div></div>
+
+
+                    <!--Input Field begin-->
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input disabled="" id="inputFieldDisabled" type="text" name="inputFieldDisabled" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span3">
+						<div class="controls">
+							<label>Label name</label>
+							<div class="fileupload fileupload-new" data-provides="fileupload">
+								<div class="input-append">
+									<div class="uneditable-input span2"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="javascript:;" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <!--Input Field end-->
+
+
+
+                        <!--Input Field with Auto Complete Script-->
+                        <script>
+                            $().ready(function(){
+                                var availableTags = [
+                                    "ActionScript",
+                                    "AppleScript",
+                                    "Asp",
+                                    "BASIC",
+                                    "C",
+                                    "C++",
+                                    "Clojure",
+                                    "COBOL",
+                                    "ColdFusion",
+                                    "Erlang",
+                                    "Fortran",
+                                    "Groovy",
+                                    "Haskell",
+                                    "Java",
+                                    "JavaScript",
+                                    "Lisp",
+                                    "Perl",
+                                    "PHP",
+                                    "Python",
+                                    "Ruby",
+                                    "Scala",
+                                    "Scheme"
+                                ];
+                                $( "#inputFieldPlaceholder" ).autocomplete({
+                                    source: availableTags
+                                });
+                            });
+                        </script>
+                </div><!-- end container -->
+                <div class="container-fluid">
+
+                    <div class="form-legend" id="Ticket_Data"><div class="form-legend-title">Data</div></div>
+
+
+                    <!--Input Field begin-->
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input disabled="" id="inputFieldDisabled" type="text" name="inputFieldDisabled" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <label>Label name</label>
+                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="input-append">
+                                <div class="uneditable-input span2"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="javascript:;" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input Field end-->
+                </div><!-- end container -->
+                <div class="container-fluid">
+
+                    <div class="form-legend" id="Input_Field"><div class="form-legend-title">Notes</div></div>
+
+
+                    <!--Input Field begin-->
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input disabled="" id="inputFieldDisabled" type="text" name="inputFieldDisabled" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <label>Label name</label>
+                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="input-append">
+                                <div class="uneditable-input span2"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="javascript:;" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input Field end-->
+                </div><!-- end container -->
+
+                <div class="container-fluid">
+
+                    <div class="form-legend" id="Input_Field"><div class="form-legend-title">Symptoms</div></div>
+
+
+                    <!--Input Field begin-->
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input disabled="" id="inputFieldDisabled" type="text" name="inputFieldDisabled" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <label>Label name</label>
+                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="input-append">
+                                <div class="uneditable-input span2"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="javascript:;" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input Field end-->
+                </div><!-- end container -->
+                <div class="container-fluid">
+
+                    <div class="form-legend" id="Input_Field"><div class="form-legend-title">Questions</div></div>
+
+
+                    <!--Input Field begin-->
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input disabled="" id="inputFieldDisabled" type="text" name="inputFieldDisabled" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <label>Label name</label>
+                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="input-append">
+                                <div class="uneditable-input span2"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="javascript:;" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input Field end-->
+                </div><!-- end container -->
+                <div class="container-fluid">
+
+                    <div class="form-legend" id="Input_Field"><div class="form-legend-title">Attachments</div></div>
+
+
+                    <!--Input Field begin-->
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input disabled="" id="inputFieldDisabled" type="text" name="inputFieldDisabled" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <label>Label name</label>
+                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="input-append">
+                                <div class="uneditable-input span2"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="javascript:;" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input Field end-->
+                </div><!-- end container -->
+                <div class="container-fluid">
+
+                    <div class="form-legend" id="Input_Field"><div class="form-legend-title">Ticket History</div></div>
+
+
+                    <!--Input Field begin-->
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input disabled="" id="inputFieldDisabled" type="text" name="inputFieldDisabled" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <label>Label name</label>
+                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="input-append">
+                                <div class="uneditable-input span2"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="javascript:;" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input Field end-->
+                </div><!-- end container -->
+                <div class="container-fluid">
+
+                    <div class="form-legend" id="Input_Field"><div class="form-legend-title">Incidence History</div></div>
+
+
+                    <!--Input Field begin-->
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group row-fluid">
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="controls">
+                                <label>Label name</label>
+                                <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input disabled="" id="inputFieldDisabled" type="text" name="inputFieldDisabled" />
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="controls">
+                            <label>Label name</label>
+                            <input id="inputFieldPlaceholder" type="text" placeholder="Please enter data" name="inputFieldPlaceholder" />
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <label>Label name</label>
+                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="input-append">
+                                <div class="uneditable-input span2"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="javascript:;" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input Field end-->
+                </div><!-- end container -->
+
+
+
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+</div>
+    </body>
+</html>
